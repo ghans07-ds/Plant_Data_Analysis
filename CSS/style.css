@@ -1,0 +1,215 @@
+@import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+}
+.container .sidebar{
+    height: 700px;
+    /* display: none; */
+    background-color: #17b978;
+    border: 2px solid white;
+    
+}
+.container .menu{
+    height: 700px;
+    background-color: white;
+}
+
+.container .sidebar header{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 10%;
+}
+
+.container .sidebar ul{
+    width: 100%;
+  
+}
+.container .sidebar ul li {
+    text-align: center;
+    padding: 10px;
+    
+}
+.container .sidebar ul li a{
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.container .sidebar ul li a:hover{
+    color: #17b978;
+    font-size: 30px;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid #17b978;
+}
+
+.container .menu .main-menu{
+    height: auto;
+    background-color: #17b978;
+    margin: auto;
+    border: 2px solid white;
+    /* margin-top: 100px; */
+
+}
+.container .menu form ul{
+    /* margin: auto;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: auto;   
+}
+
+.container .menu form select{
+    padding: 15px; 
+    background-color: white;
+    margin: 5px;
+    font-size: 15px;
+}
+
+/* .container .menu form ul li select option{
+    padding: 10px;
+    text-align: center;
+    border: none; 
+    border-radius: 5px;
+} */
+.container .menu .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 1%; */
+    background-color: #17b978; 
+    border: 2px solid white;
+}
+.container .menu .btn button{
+    width: 195px;
+    height: 35px;
+    margin: 1%;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border: 2px solid #17b978;
+    text-align: center;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+.container .menu .btn button:hover{
+    background-color: #17b978 ;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid white;
+}
+
+.container .menu .box-ans{
+    background-color: white;
+    height: 250px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+.container .menu .box-ans .box-a{
+    background-color: #17b978;
+    margin: 5px;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.container .menu .box-same{
+    background-color: white;
+    height: 250px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    /* overflow: hidden; */
+    /* width: 100%; */
+}
+
+.container .menu .box-same .box-s{
+    background-color: #17b978;
+    margin: 5px ;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.container .menu .box-same .box-s .id-title{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 800;
+    color: white;
+    background-color: violet;
+}
+
+.container .menu .box-ans .box-aa,.box-ab{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.container .menu .box-ans .box-aa,.box-ab ul li,.container .menu .box-same .box-s ul{
+    text-align: center;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+ }
+ .container .menu .box-ans .box-aa ul li{
+    font-weight: 700;
+    color: blanchedalmond;
+    /* position: relative; */
+ }
+
+ .container .menu .box-ans .box-aa ul li .tooltiptext{
+    visibility: hidden;
+    width: 300px;
+    font-size: 20px;
+    background-color: rgb(23, 141, 58);
+    color:blue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-weight: 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    /* transition: 2s; */
+    transition-delay: 0.5s;
+
+ }
+ .container .menu .box-ans .box-aa ul li:hover .tooltiptext {
+    visibility: visible;
+    transform: translateX(-90%) translateY(-90%);
+  }
+
+ .container .menu form ul .namelist{
+    display: inline-block;
+ }
