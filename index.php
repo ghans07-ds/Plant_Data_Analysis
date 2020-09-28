@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -26,6 +26,7 @@
         $target="";
         if(isset($_POST['submit']))
         {
+            header('location:annotation.php');
             $p_name=$_POST['p_name'];
             $p_class=$_POST['p_class'];
             $p_SupperClass=$_POST['p_SupperClass'];
@@ -136,6 +137,7 @@
                             
                             if($print==1)
                             {
+                                
                                 $text="<ul><li>".$Entry."</li><li>".$EntryName."</li><li>".$ProName."</li><li>".$Organism."</li></ul>";
                                 echo "<li>".$p_name."</li>";
                                 echo "<li>".$p_class."</li>";
