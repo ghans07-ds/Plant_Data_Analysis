@@ -27,16 +27,6 @@
                 <td>P-Value</td>
                 <td>Benjamimi</td>
             </tr>
-            <!-- <tr class="value">
-                <td>0</td>
-                <td>UP_KEYWORDS</td>
-                <td><a href="http://www.uniprot.org/keywords/?query=Oxidoreductase">Oxidoreductase</a></td>
-                <td><a href="https://david.ncifcrf.gov/relatedTerms.jsp?id=870000802">RT</a></td>
-                <td>14</td>
-                <td>0.6</td>
-                <td>4.7E-17</td>
-                <td>2.6E-15</td>
-            </tr> -->
             <?php
                     $sql_fetch="SELECT * FROM annotpiperlongum";
                     $result_f=mysqli_query($conn,$sql_fetch);

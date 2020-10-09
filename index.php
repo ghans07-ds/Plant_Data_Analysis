@@ -142,7 +142,7 @@
                             // 
                             while($data = mysqli_fetch_array($records))
                             {
-                                echo "<li><a href=annotation.php>".$data['CompoundName']."</a></li>";  // displaying data in option menu
+                                echo "<li>".$data['CompoundName']."</li>";  // displaying data in option menu
                             }
                         }else{
                             echo "";
@@ -169,11 +169,11 @@
                             if($print==1)
                             {
                                 
-                                $records = mysqli_query($conn, "SELECT DISTINCT TargetGene,plantName From plantdata where CompoundName='$p_class'");  // Use select query here 
+                                $records = mysqli_query($conn, "select DISTINCT p.TargetGene,t.link from plantdata as p,targetgenelink as t where p.TargetGene=t.TargetGene AND p.CompoundName='$p_class'");  // Use select query here 
                                 // 
                                  while($data = mysqli_fetch_array($records))
                                  {
-                                    echo "<li><a href=annotation.php>".$data['TargetGene']."</a></li>";  // displaying data in option menu
+                                    echo "<li><a href=".$data['link'].">".$data['TargetGene']."</a></li>";  // displaying data in option menu
                                  }
                             }
                             else
@@ -197,7 +197,8 @@
                                 $i--;
                                 $ID[$i]=strtoupper($ID[$i]);
                                 $link="https://www.rcsb.org/structure/".$ID[$i];
-                                echo "<li><a href='$link' target='_blank'>".$ID[$i]." : ".$score[$i]."</a></li>";  
+                                echo "<li><a href='$link' target='_blank'>".$ID[$i]." : ".$score[$i]."</a>
+                                    <a href=annotation.php target='_blank'>structure</a></li>";  
                             }
                         }
                         else
