@@ -1,5 +1,5 @@
 @import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
-
+.col-0 {width: 0px;}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -26,7 +26,7 @@
 .container .sidebar{
     height: 700px;
     /* display: none; */
-    background-color: #17b978;
+    background-color: #84c4aa;
     border: 2px solid white;
     
 }
@@ -62,12 +62,12 @@
     font-size: 30px;
     background-color: white;
     padding: 5px;
-    border: 2px solid #17b978;
+    border: 2px solid #84c4aa;
 }
 
 .container .menu .main-menu{
     height: auto;
-    background-color: #17b978;
+    background-color: #84c4aa;
     margin: auto;
     border: 2px solid white;
     /* margin-top: 100px; */
@@ -100,7 +100,7 @@
     justify-content: center;
     align-items: center;
     /* margin: 1%; */
-    background-color: #17b978; 
+    background-color: #84c4aa; 
     border: 2px solid white;
 }
 .container .menu .btn button{
@@ -112,13 +112,13 @@
     font-size: 15px;
     background-color: white;
     color: black;
-    border: 2px solid #17b978;
+    border: 2px solid #84c4aa;
     text-align: center;
     border-radius: 2px;
     transition-duration: 0.4s;
 }
 .container .menu .btn button:hover{
-    background-color: #17b978 ;
+    background-color: #84c4aa ;
     color: white;
     font-size: 20px;
     font-weight: 700;
@@ -129,21 +129,22 @@
     background-color: white;
     height: 250px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     /* width: 100%; */
 }
-.container .menu .box-ans .box-a{
-    background-color: #17b978;
-    margin: 5px;
+.container .menu .box-ans .box-a .scroll{
+    background-color: #84c4aa;
+    margin: 0px;
     border-radius: 5px;
     overflow: scroll;
+    height: 450px;
 }
 
 .container .menu .box-same{
     background-color: white;
-    height: 250px;
+    height: 550px;
     margin: auto;
     margin-top: 10px;
     display: flex;
@@ -154,12 +155,13 @@
 }
 
 .container .menu .box-same .box-s{
-    background-color: #17b978;
+    background-color: #84c4aa;
     margin: 5px ;
     border-radius: 5px;
     overflow: hidden;
 }
-.container .menu .box-same .box-s .id-title{
+/* .container .menu .box-same .box-s */
+ .id-title{
     width: 100%;
     height: 40px;
     text-align: center;
@@ -167,18 +169,20 @@
     line-height: 30px;
     font-weight: 800;
     color: white;
-    background-color: violet;
+    background-color: rgb(16, 117, 55);
+    /* position: fixed; */
 }
 
-.container .menu .box-ans .box-aa,.box-ab{
-   display: flex;
+.container .menu .box-ans .box-aa,.box-ab,.box-ac{
+   display: block;
    align-items: center;
    justify-content: center;
+   /* padding-top: 0px; */
 }
-.container .menu .box-ans .box-aa,.box-ab ul li,.container .menu .box-same .box-s ul{
+.container .menu .box-ans .box-aa,.box-ab,.box-ac ul li,.container .menu .box-same .box-s ul{
     text-align: center;
     margin: 5px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     color: white;
  }
@@ -192,7 +196,7 @@
     visibility: hidden;
     width: 300px;
     font-size: 20px;
-    background-color: rgb(23, 141, 58);
+    background-color: #84c4aa;
     color:blue;
     text-align: center;
     border-radius: 6px;
@@ -212,4 +216,12 @@
 
  .container .menu form ul .namelist{
     display: inline-block;
+ }
+ .container .menu .title{
+     background-color: rgb(35, 163, 28);
+     padding: 5px;
+ }
+ .container .menu .title p{
+     text-align: center;
+     font-size: xx-large;
  }

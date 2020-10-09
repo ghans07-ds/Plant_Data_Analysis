@@ -1,0 +1,116 @@
+<div class="col-11 box-same">
+    <div class="box-s col-4">
+        <div class="id-title">
+            <?php
+                // if($print==1)
+                //     {echo $pID[2];} 
+                // else{echo " ";}
+            ?>
+        </div>
+        <ul>
+        <!-- fetching similar result for box1 -->
+            <?php  
+                if($print==1)
+                {
+                    $error_b1=0;
+                    $sql_b1="SELECT CompoundName,pScore from trialtable WHERE pID='$pID[2]';";
+                    $result_b1=mysqli_query($conn,$sql_b1);
+
+                    if(mysqli_num_rows($result_b1)>0 && $print==1)
+                    {
+                        while($row=mysqli_fetch_assoc($result_b1))
+                        {
+                            if($row['CompoundName']!=$p_class)
+                            {
+                                echo "<li>".$row['CompoundName']." : ".$row['pScore']."</li>"; 
+                                $error_b1=1;
+                            }
+                        }
+                        if($error_b1==0)
+                        {
+                            echo "<li>"."No Similarity"."</li>";   
+                        }
+                    }
+                }
+                else{echo "";}
+            
+            ?>
+        </ul>
+    </div>
+    <div class="box-s col-4">
+        <div class="id-title">
+            <?php
+                if($print==1)
+                    {echo $pID[1];} 
+                else{echo " ";}
+            ?>
+        </div>
+        <ul>
+        <!-- fetching similar result for box2 -->
+            <?php  
+                if($print==1)
+                {
+                    $error_b2=0;
+                    $sql_b1="SELECT CompoundName,pScore from trialtable WHERE pID='$pID[1]';";
+                    $result_b1=mysqli_query($conn,$sql_b1);
+
+                    if(mysqli_num_rows($result_b1)>0 && $print==1)
+                    {
+                        while($row=mysqli_fetch_assoc($result_b1))
+                        {
+                            if($row['CompoundName']!=$p_class)
+                            {
+                                echo "<li>".$row['CompoundName']." : ".$row['pScore']."</li>"; 
+                                $error_b2=1;
+                            }
+                        }
+                        if($error_b2==0)
+                        {
+                            echo "<li>"."No Similarity"."</li>";   
+                        }
+                    }
+                }
+                else{echo "";}
+
+            ?>
+        </ul>
+    </div>
+    <div class="box-s col-4">
+        <div class="id-title">
+            <?php
+            if($print==1)
+                {echo $pID[0];} 
+            else{echo " ";}
+            ?>
+        </div>
+        <ul>
+        <!-- fetching similar result for box3 -->
+            <?php  
+                if($print==1)
+                {
+                    $error_b3=0;
+                    $sql_b1="SELECT CompoundName,pScore from trialtable WHERE pID='$pID[0]';";
+                    $result_b1=mysqli_query($conn,$sql_b1);
+
+                    if(mysqli_num_rows($result_b1)>0 && $print==1)
+                    {
+                        while($row=mysqli_fetch_assoc($result_b1))
+                        {
+                            if($row['CompoundName']!=$p_class)
+                            {
+                                echo "<li>".$row['CompoundName']." : ".$row['pScore']."</li>"; 
+                                $error_b3=1;
+                            }
+                        }
+                        if($error_b3==0)
+                        {
+                            echo "<li>"."No Similarity"."</li>";   
+                        }
+                    }
+                }
+                else{echo "";}
+
+            ?>
+        </ul>
+    </div>
+</div>

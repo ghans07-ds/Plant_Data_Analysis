@@ -3,7 +3,7 @@
  $servername="localhost";
   $username="root";
   $password="";
-  $dbname="trial";
+  $dbname="plant";
   $count=0;
   
   $conn=mysqli_connect($servername,$username,$password,$dbname);
